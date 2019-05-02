@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PembayaranPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { KebersihanPage } from '../kebersihan/kebersihan';
+import { KeamananPage } from '../keamanan/keamanan';
 
 @IonicPage()
 @Component({
@@ -20,6 +15,12 @@ export class PembayaranPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PembayaranPage');
+  }
+  goKebersihan(){
+    this.navCtrl.push(KebersihanPage);
+  }
+  goKeamanan(){
+    this.navCtrl.push(KeamananPage);
   }
 
 }

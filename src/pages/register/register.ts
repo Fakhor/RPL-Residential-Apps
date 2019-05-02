@@ -37,7 +37,7 @@ export class RegisterPage {
     }).present();
   }
   register(){
-    this.fire.auth.createUserWithEmailAndPassword(this.user.value, this.password.value)
+    this.fire.auth.createUserWithEmailAndPassword(this.user.value + '@domain.xta', this.password.value)
     .then(data => {
       console.log('got data ', data);
       this.alert('Registered!');
