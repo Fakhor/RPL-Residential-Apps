@@ -6,19 +6,19 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item detail-push>
-      Edit Profil
-    </ion-item>
-    <ion-item detail-push>
-      Push Notification
-    </ion-item>
-    <ion-item detail-push>
-      About Residential Apps
-    </ion-item>
-    <ion-item detail-push>
-      Keluar
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <button clear ion-item (click)="goEditprofil()">
+          Edit Profil
+        </button>
+        <button clear ion-item (click)="goNotifikasi()">
+          Notifikasi
+        </button>
+        <button clear ion-item (click)="goTentang()">
+            Tentang Residential Apps
+        </button>
+        <button clear ion-item (click)="signout()">
+            Keluar
+        </button>
+    </ion-list>
 
 </ion-content>

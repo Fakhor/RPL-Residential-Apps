@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PengaturanPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HomePage } from '../home/home';
+import { NotifikasiPage } from '../notifikasi/notifikasi';
+import { EditprofilePage } from '../editprofile/editprofile';
+import { TentangPage } from '../tentang/tentang';
 
 @IonicPage()
 @Component({
@@ -22,4 +19,19 @@ export class PengaturanPage {
     console.log('ionViewDidLoad PengaturanPage');
   }
 
+  signout() {
+    this.navCtrl.setRoot(HomePage);
+  }
+
+  goNotifikasi() {
+    this.navCtrl.push(NotifikasiPage);
+  }
+
+  goEditprofil() {
+    this.navCtrl.push(EditprofilePage);
+  }
+
+  goTentang() {
+    this.navCtrl.push(TentangPage);
+  }
 }
