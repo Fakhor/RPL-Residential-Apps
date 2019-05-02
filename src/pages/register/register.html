@@ -19,13 +19,13 @@
             <ion-input placeholder="Nomor Telepon" type="text"></ion-input>
           </ion-item>
       <ion-item>
-        <ion-input placeholder="Nama Pengguna" [(ngModel)]="username"></ion-input>
+        <ion-input placeholder="Nama Pengguna" [(ngModel)]="username" #user></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="Kata Sandi" type="password" [(ngModel)]="password"></ion-input>
+        <ion-input placeholder="Kata Sandi" type="password" [(ngModel)]="userPassword" #pass></ion-input>
       </ion-item>
     </ion-list>
   
-    <button ion-button full (click)="formlogin()">Register</button>
+    <button ion-button full (click)="register()">Register</button>
 
 </ion-content>

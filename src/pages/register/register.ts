@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
  * Generated class for the RegisterPage page.
@@ -14,21 +15,39 @@ import { HomePage } from '../home/home';
   selector: 'page-register',
   templateUrl: 'register.html',
 })
+
+
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  @ViewChild('user') user;
+  @ViewChild('pass') password;
+
+  constructor(private alertCtrl: AlertController, private fire: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
 
-<<<<<<< HEAD
+  alert(message: string) {
+    this.alertCtrl.create({
+      title: 'Info!',
+      subTitle: message,
+      buttons: ['OK']
+    }).present();
+  }
   register(){
-    this.navCtrl.setRoot('TabsPage');
-=======
-  formlogin(){
-    this.navCtrl.pop();
->>>>>>> 147e9f70173ab02bad456b635faa0391c28049a3
+    this.fire.auth.createUserWithEmailAndPassword(this.user.value, this.password.value)
+    .then(data => {
+      console.log('got data ', data);
+      this.alert('Registered!');
+      this.navCtrl.setRoot( HomePage );
+    })
+
+    .catch(error => {
+      console.log('got an error',error);
+      this.alert(error.message);
+    });
+
   }
 }
