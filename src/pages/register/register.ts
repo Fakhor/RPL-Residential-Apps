@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { HomePage } from '../home/home';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-register',

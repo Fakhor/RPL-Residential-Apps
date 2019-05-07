@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddTamuPage } from '../add-tamu/add-tamu'
-/**
- * Generated class for the TamuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { TamuItem } from '../../models/tamu-item/tamu-item.interface';
+
 
 @IonicPage()
 @Component({
@@ -15,7 +12,11 @@ import { AddTamuPage } from '../add-tamu/add-tamu'
 })
 export class TamuPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  tamuListRef$: FirebaseListObservable<TamuItem[]>
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private database: AngularFireDatabase) {
+
+     this.tamuListRef$ = this.database.list('tamu');
   }
 
   navigateTamuPage(){

@@ -11,7 +11,7 @@ export class HomePage {
 
   @ViewChild('user') user;
   @ViewChild('pass') pass;
-  
+
   username:string;
   password:string;
   constructor(private alertCtrl: AlertController, private fire:AngularFireAuth, public navCtrl: NavController) {
@@ -26,7 +26,7 @@ export class HomePage {
   }
 
   login(){
-    this.fire.auth.signInWithEmailAndPassword(this.user.value, this.pass.value)
+    this.fire.auth.signInWithEmailAndPassword(this.user.value + '@domain.xta', this.pass.value)
     .then( data => {
       console.log('got some data', data);
       this.alert('Success! You\'re logged in');
