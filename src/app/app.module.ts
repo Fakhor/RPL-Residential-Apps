@@ -20,6 +20,8 @@ import { KeamananPage } from '../pages/keamanan/keamanan';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { TentangPage } from '../pages/tentang/tentang';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AddTamuPage } from '../pages/add-tamu/add-tamu';
 
 const firebaseAuth = {
   apiKey: "AIzaSyBdH-s2GvFHs1WMR_qtQTjzFq3xNk9EjQw",
@@ -39,7 +41,8 @@ const firebaseAuth = {
     KeamananPage,
     NotifikasiPage,
     EditprofilePage,
-    TentangPage
+    TentangPage,
+    AddTamuPage
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ const firebaseAuth = {
     PengaturanPageModule,
     TamuPageModule,
     AngularFireModule.initializeApp(firebaseAuth),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,7 +66,8 @@ const firebaseAuth = {
     KeamananPage,
     NotifikasiPage,
     EditprofilePage,
-    TentangPage
+    TentangPage,
+    AddTamuPage
   ],
   providers: [
     StatusBar,

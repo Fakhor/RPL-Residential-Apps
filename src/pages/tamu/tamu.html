@@ -2,31 +2,15 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Tamu</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only
+        (click)="navigateTamuPage()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-card color="light">
-              <ion-card-content>
-              Nama tamu
-              </ion-card-content>
-              <ion-card-content>
-              Jam kedatangan
-              </ion-card-content>
-              <ion-card-content>
-              Keperluan
-              </ion-card-content>
-
-
-                <ion-checkbox>Sudah Datang</ion-checkbox>
-
-
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
 
 </ion-content>
