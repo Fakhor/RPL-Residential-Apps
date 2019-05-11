@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TamuItem } from '../../models/tamu-item/tamu-item.interface';
-import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database-deprecated';
 
 @IonicPage()
 @Component({
@@ -18,6 +18,7 @@ export class AddTamuPage {
     private database: AngularFireDatabase) {
       this.tamuItemRef$ = this.database.list('tamu');
   }
+  
   addTamuItem(tamuItem : TamuItem){
     this.tamuItemRef$.push({
       itemName: this.tamuItem.itemName,

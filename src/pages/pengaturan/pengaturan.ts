@@ -20,7 +20,7 @@ export class PengaturanPage {
   }
 
   signout() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(HomePage);
   }
 
   goNotifikasi() {

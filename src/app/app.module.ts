@@ -20,8 +20,9 @@ import { KeamananPage } from '../pages/keamanan/keamanan';
 import { NotifikasiPage } from '../pages/notifikasi/notifikasi';
 import { EditprofilePage } from '../pages/editprofile/editprofile';
 import { TentangPage } from '../pages/tentang/tentang';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { AddTamuPage } from '../pages/add-tamu/add-tamu';
+import { EditTamuPage } from '../pages/edit-tamu/edit-tamu';
 
 const firebaseAuth = {
   apiKey: "AIzaSyBdH-s2GvFHs1WMR_qtQTjzFq3xNk9EjQw",
@@ -42,7 +43,8 @@ const firebaseAuth = {
     NotifikasiPage,
     EditprofilePage,
     TentangPage,
-    AddTamuPage
+    AddTamuPage,
+    EditTamuPage
   ],
   imports: [
     BrowserModule,
@@ -67,13 +69,15 @@ const firebaseAuth = {
     NotifikasiPage,
     EditprofilePage,
     TentangPage,
-    AddTamuPage
+    AddTamuPage,
+    EditTamuPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AngularFireDatabase
     ]
 })
 export class AppModule {}
