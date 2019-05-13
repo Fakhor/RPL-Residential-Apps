@@ -9,6 +9,7 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
  */
 import { TamuItem } from 
 '../../models/tamu-item/tamu-item.interface';
+import { TamuPage } from '../tamu/tamu';
 
 @IonicPage()
 @Component({
@@ -37,6 +38,7 @@ export class EditTamuPage {
 
   updateTamuItem(tamuItem : TamuItem){
     this.tamuItemRef$.update(tamuItem);
+    this.navCtrl.push( TamuPage );
   }
 
   ionViewDidLoad() {

@@ -14,6 +14,8 @@ import { PembayaranPageModule } from '../pages/pembayaran/pembayaran.module';
 import { PengaturanPageModule } from '../pages/pengaturan/pengaturan.module';
 import { TamuPageModule } from '../pages/tamu/tamu.module';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule, AngularFireStorageProvider } from 'angularfire2/storage';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { KebersihanPage } from '../pages/kebersihan/kebersihan';
 import { KeamananPage } from '../pages/keamanan/keamanan';
@@ -58,6 +60,8 @@ const firebaseAuth = {
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

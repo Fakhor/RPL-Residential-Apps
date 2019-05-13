@@ -9,6 +9,17 @@
     <ion-title>Jumlah tagihan anda :</ion-title>
     <h3>Rp.</h3>
     <p>unggah gambar bukti pembayaran anda disini :</p>
-    <button ion-button full>unggah</button>
+   
+    <div cass="dropzone"
+      dropzone
+      (hovered)="toggleHover($event)"
+      (dropped)="startUpload($event)"
+      [class.hovering]="isHovering">
 
-</ion-content>
+      <div class="file">
+        <label class="file-label">
+        <input type="file" (change)="startUpload($event.target.files)">
+        </label>
+        </div>
+      </div>
+      </ion-content>
