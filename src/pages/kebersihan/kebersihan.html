@@ -19,7 +19,17 @@
       <div class="file">
         <label class="file-label">
         <input type="file" (change)="startUpload($event.target.files)">
-        </label>
+        <br>
+        <div *ngIf="percentage | async as pct">
+          <progress [value]="pct" max="100"></progress>
+        </div>
+        <br>
+        <div *ngIf="downloadURL | async as url">
+        <ion-title>Uploaded!</ion-title>
+        <br>
+        <img [src]="url">
+      </div>  
+      </label>
         </div>
       </div>
       </ion-content>
