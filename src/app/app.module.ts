@@ -25,6 +25,10 @@ import { TentangPage } from '../pages/tentang/tentang';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database-deprecated';
 import { AddTamuPage } from '../pages/add-tamu/add-tamu';
 import { EditTamuPage } from '../pages/edit-tamu/edit-tamu';
+import { AddPaketPage } from '../pages/add-paket/add-paket';
+import { EditPaketPage } from '../pages/edit-paket/edit-paket';
+
+
 
 const firebaseAuth = {
   apiKey: "AIzaSyBdH-s2GvFHs1WMR_qtQTjzFq3xNk9EjQw",
@@ -46,7 +50,9 @@ const firebaseAuth = {
     EditprofilePage,
     TentangPage,
     AddTamuPage,
-    EditTamuPage
+    EditTamuPage,
+    AddPaketPage,
+    EditPaketPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +80,9 @@ const firebaseAuth = {
     EditprofilePage,
     TentangPage,
     AddTamuPage,
-    EditTamuPage
+    EditTamuPage,
+    AddPaketPage,
+    EditPaketPage
   ],
   providers: [
     StatusBar,

@@ -7,7 +7,7 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-import { TamuItem } from 
+import { TamuItem } from
 '../../models/tamu-item/tamu-item.interface';
 import { TamuPage } from '../tamu/tamu';
 
@@ -22,10 +22,10 @@ export class EditTamuPage {
   tamuItem = {} as TamuItem;
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private database: AngularFireDatabase) {
-      
+
       const tamuItemId = this.navParams.get('tamuItemId');
 
       console.log(tamuItemId);

@@ -2,34 +2,25 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Paket</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only
+        (click)="navigatePaketPage()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-card color="light">
-          <ion-card-content>
-          Jenis Paket : <ion-list></ion-list>
-          </ion-card-content>
-          <ion-card-content>
-          Kurir via : <ion-list></ion-list>
-          </ion-card-content>
-          <ion-card-content>
-          Nama Kurir : <ion-list></ion-list>
-          </ion-card-content>
-          <ion-card-content>
-          Waktu diterima : <ion-list></ion-list>
-          </ion-card-content>
+<ion-content padding>
+
+  <ion-list>
 
 
-            <ion-checkbox>Sudah Diterima</ion-checkbox>
+    <ion-item *ngFor="let item of paketListRef$ | async" (click)="selectPaket(item)">
+        <h2>Nama Paket: {{item.itemName}}</h2>
+        <h3>Jumlah Paket: {{item.itemNumber}}</h3>
+    </ion-item>
 
-
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  </ion-list>
 
 </ion-content>

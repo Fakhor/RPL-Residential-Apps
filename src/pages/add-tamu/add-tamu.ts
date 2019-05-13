@@ -18,7 +18,7 @@ export class AddTamuPage {
     private database: AngularFireDatabase) {
       this.tamuItemRef$ = this.database.list('tamu');
   }
-  
+
   addTamuItem(tamuItem : TamuItem){
     this.tamuItemRef$.push({
       itemName: this.tamuItem.itemName,

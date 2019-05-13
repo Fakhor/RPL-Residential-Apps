@@ -15,7 +15,7 @@
 
   <ion-list>
 
-    
+
     <ion-item *ngFor="let item of tamuListRef$ | async" (click)="selectTamu(item)">
         <h2>Nama Tamu: {{item.itemName}}</h2>
         <h3>Jumlah Tamu: {{item.itemNumber}}</h3>
